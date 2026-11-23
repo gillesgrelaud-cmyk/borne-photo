@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borne Photo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📷 Borne <span>Photo</span></h1>
+    <p>Trois photos, quelques filtres, et une bande à emporter.</p>
+  </header>
+
+  <main>
+    <section class="stage">
+      <div class="camera-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="canvas"></canvas>
+        <div class="countdown" id="countdown"></div>
+        <div class="camera-status" id="cameraStatus">
+          Caméra inactive — cliquez sur « Lancer la séance ».
+        </div>
+      </div>
+
+      <div class="filters" id="filters" aria-label="Filtres"></div>
+
+      <div class="controls">
+        <button id="start">Lancer la séance</button>
+        <button id="retake" disabled>Refaire la séance</button>
+        <button id="download">Télécharger la bande</button>
+        <button id="reset" disabled>Réinitialiser</button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Votre bande</h2>
+      <div id="strip"></div>
+    </section>
+  </main>
+
+  <footer>
+    Fonctionne dans Chrome, Edge ou Firefox. L'accès à la caméra nécessite HTTPS ou localhost.
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
